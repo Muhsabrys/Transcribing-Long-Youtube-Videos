@@ -1,5 +1,5 @@
 
-# 🎙️ YouTube Arabic Transcriber using Whisper Large-v3
+# 🎙️ YouTube Transcriber using Whisper Large-v3
 
 This repository provides a Colab-ready pipeline for automatically transcribing **Arabic audio from YouTube videos** using [OpenAI's Whisper large-v3 model](https://huggingface.co/openai/whisper-large-v3) via Hugging Face Transformers.
 
