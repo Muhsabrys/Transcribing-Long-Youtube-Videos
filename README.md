@@ -1,3 +1,4 @@
+
 # 🎙️ YouTube Arabic Transcriber using Whisper Large-v3
 
 This repository provides a Colab-ready pipeline for automatically transcribing **Arabic audio from YouTube videos** using [OpenAI's Whisper large-v3 model](https://huggingface.co/openai/whisper-large-v3) via Hugging Face Transformers.
@@ -21,45 +22,56 @@ These packages are installed automatically in the notebook:
 ```bash
 pip install pytube pydub moviepy transformers accelerate datasets[audio] torchaudio yt-dlp
 apt update && apt install -y ffmpeg
-🚀 Model Used
-Model: openai/whisper-large-v3
+```
 
-Framework: Hugging Face 🤗 Transformers
+---
 
-Capabilities:
+## 🚀 Model Used
 
-Speech recognition in 99 languages
+- **Model**: [`openai/whisper-large-v3`](https://huggingface.co/openai/whisper-large-v3)
+- **Framework**: Hugging Face 🤗 Transformers
+- **Capabilities**:
+  - Speech recognition in 99 languages
+  - Robust transcription with noisy and accented audio
+  - Zero-shot generalization
 
-Robust transcription with noisy and accented audio
+---
 
-Zero-shot generalization
+## 📂 File Outputs
 
-📂 File Outputs
-converted_audio.wav: Clean WAV audio generated from YouTube.
+- `converted_audio.wav`: Clean WAV audio generated from YouTube.
+- `chunk_*.wav`: Temporary 30-second audio chunks (auto-deleted after transcription).
+- `transcription.txt`: Full transcript of the YouTube video.
 
-chunk_*.wav: Temporary 30-second audio chunks (auto-deleted after transcription).
+---
 
-transcription.txt: Full transcript of the YouTube video.
+## ▶️ Usage
 
-▶️ Usage
 Paste your YouTube link in the code cell like so:
 
-python
-Copy
-Edit
+```python
 youtube_link = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 process_youtube_video(youtube_link)
-The transcript will be saved in your working directory as transcription.txt.
+```
 
-📌 Notes
-This pipeline uses GPU acceleration when available (torch.float16).
+The transcript will be saved in your working directory as `transcription.txt`.
 
-Whisper handles language detection automatically.
+---
 
-To translate speech instead of transcribing it, modify the pipe(...) call using generate_kwargs={"task": "translate"}.
+## 📌 Notes
 
-📜 License
-This repo uses OpenAI’s Whisper under the Apache 2.0 License.
+- This pipeline uses GPU acceleration when available (`torch.float16`).
+- Whisper handles language detection automatically.
+- To translate speech instead of transcribing it, modify the `pipe(...)` call using `generate_kwargs={"task": "translate"}`.
 
-✍️ Author
+---
+
+## 📜 License
+
+This repo uses OpenAI’s Whisper under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
+---
+
+## ✍️ Author
+
 This project was assembled for efficient Arabic (and multilingual) speech transcription from long-form YouTube videos using modern open-source tools.
