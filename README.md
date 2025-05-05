@@ -17,7 +17,7 @@ Given a YouTube link, this notebook:
 
 ## 🔧 Requirements
 
-These packages are installed automatically in the notebook:
+These are the libraries you are going to use before running the code:
 
 ```bash
 pip install pytube pydub moviepy transformers accelerate datasets[audio] torchaudio yt-dlp
