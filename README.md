@@ -74,4 +74,4 @@ This repo uses OpenAI’s Whisper under the [Apache 2.0 License](https://www.apa
 
 ## ✍️ Author
 
-This project was assembled for efficient Arabic (and multilingual) speech transcription from long-form YouTube videos using modern open-source tools.
+This project was assembled for efficient Arabic (and multilingual) speech transcription from long-form YouTube videos using modern open-source tools by **Muhammad S. Abdo**
